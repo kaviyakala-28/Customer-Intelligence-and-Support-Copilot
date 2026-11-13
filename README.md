@@ -49,9 +49,9 @@ Follow these steps from the project root folder.
    python validate_data.py
    ```
 
-6. Open the Part A+B notebook in VS Code and run the cells in order.
+6. Open the Part_AB_Customer_Intelligence notebook in VS Code and run the cells in order.
 
-7. Open the Part C+D notebook and run the cells in order.
+17. Open the Part_CD_Support_Copilot notebook and run the cells in order.
 
 The notebooks should be run in sequence because later parts use files created by earlier parts.
 
@@ -75,10 +75,10 @@ I also wrote SQL queries to answer business questions and checked selected resul
 
 **Key results:**
 
-- Raw order rows: [Add actual result]
-- Duplicate order rows: [Add actual result]
-- Clean customer rows: [Add actual result]
-- Clean order rows: [Add actual result]
+- Raw order rows
+- Duplicate order rows 
+- Clean customer rows
+- Clean order rows
 - SQLite database: `data/instamart.db`
 - SQL query file: `sql/queries.sql`
 
@@ -101,8 +101,6 @@ I also created a lapse prediction dataset using the September 2025 cutoff. Logis
 - Training rows: 924
 - Test rows: 232
 - Baseline accuracy: 61.6%
-- Selected model: [Add selected model]
-- Selected model test F1-score: [Add actual result]
 - Customers who actually lapsed in the retention list: 1
 
 **Files created:**
@@ -115,8 +113,6 @@ The preprocessing steps were fitted using training data only. No encoder, scaler
 
 ## Part C – Support Ticket Triage
 
-[Complete this section after Part C tasks are finished.]
-
 This part uses the support ticket data and the supplied `mock_llm.py` file. The pipeline includes input checks, personal information redaction, zero-shot and few-shot prompts, retry handling, output validation and token-budget-based routing.
 
 **Key results:**
@@ -125,14 +121,13 @@ This part uses the support ticket data and the supplied `mock_llm.py` file. The 
 - Empty tickets skipped: 4
 - Long tickets flagged: 4
 - Eligible tickets: 156
-- Email substitutions: [Add result]
-- Phone substitutions: [Add result]
-- Order ID substitutions: [Add result]
-- Zero-shot accuracy: [Add result]
-- Few-shot accuracy: [Add result]
-- Tickets requiring human review: [Add result]
-- Token budget used for the demonstration: [Add result]
-
+- Email substitutions
+- Phone substitutions
+- Order ID substitutions
+- Zero-shot accuracy
+- Few-shot accuracy
+- Tickets requiring human review
+- Token budget used for the demonstration
 **Files created:**
 
 - `outputs/triage_results.csv`
@@ -140,7 +135,6 @@ This part uses the support ticket data and the supplied `mock_llm.py` file. The 
 
 ## Part D – Policy RAG Assistant and Refund Agent
 
-[Complete this section after Part D tasks are finished.]
 
 In this part, I worked with the policy documents provided in the project. The policy assistant retrieves relevant information from these documents before preparing an answer.
 
@@ -149,11 +143,11 @@ The refund agent uses order information and policy details to decide whether a r
 **Key results:**
 
 - Number of policy documents: 5
-- Seven scenario results: [Add the scenario results table]
-- Token-limit demonstration status: [Add result]
-- Timeout demonstration status: [Add result]
-- Crash-and-resume result: [Add result]
-- Tools executed during the resumed run: [Add actual order]
+- Seven scenario results
+- Token-limit demonstration status
+- Timeout demonstration status
+- Crash-and-resume result:
+- Tools executed during the resumed run
 
 **Files created:**
 
